@@ -99,3 +99,40 @@
 // console.log(rocksWarning('Main St and Pacific Ave'));
 // console.log(rocksWarning('Main St and Pacific Ave'));
 // console.log(rocksWarning('Main St and Pacific Ave'));
+
+function turtlemovement(array) {
+
+    return array.map(function (steps) {
+        sum = steps[0] + steps[1];
+        return sum;
+    });
+
+}
+
+function turtlefilter(arr) {
+
+    return arr.filter((subArr) => subArr[0] >= 0 && subArr[1] >= 0);
+}
+
+function sumofsteps(array) {
+
+    return array.forEach((step, index) => {
+        console.log('Movement #' + (index + 1) + ': ' + step + ' steps.')
+    });
+
+}
+
+let turtlearray = [
+    [0, 0],
+    [0, 5],
+    [-1, -3],
+    [-3, 1],
+    [2, -4],
+    [3, 2]
+];
+
+const filteredMovement = turtlefilter(turtlearray);
+const mappedMovement = turtlemovement(filteredMovement);
+const lastMovement = sumofsteps(mappedMovement);
+
+console.log(lastMovement);
